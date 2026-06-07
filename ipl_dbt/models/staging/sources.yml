@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: main
+    description: "Raw IPL data loaded from Kaggle CSVs via dbt seed"
+    tables:
+      - name: matches
+        description: "One row per IPL match from 2007 to 2024"
+        columns:
+          - name: id
+            description: "Unique match ID"
+          - name: season
+            description: "IPL season year"
+          - name: date
+            description: "Match date"
+          - name: winner
+            description: "Winning team name"
+
+      - name: deliveries
+        description: "One row per delivery bowled across all IPL matches"
+        columns:
+          - name: match_id
+            description: "Foreign key to matches.id"
+          - name: inning
+            description: "Innings number"
+          - name: batter
+            description: "Batsman facing the ball"
+          - name: bowler
+            description: "Bowler bowling the ball"
+          - name: batsman_runs
+            description: "Runs scored by batsman off this ball"
+          - name: is_wicket
+            description: "1 if wicket fell, 0 otherwise"

@@ -1,0 +1,13 @@
+venv/
+logs/
+
+*.duckdb
+*.wal
+
+ipl_dbt/target/
+ipl_dbt/dbt_packages/
+ipl_dbt/logs/
+
+__pycache__/
+.vscode/
+.env
