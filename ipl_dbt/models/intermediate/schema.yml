@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: int_batting_stats
+    description: "Per batter per innings aggregates — runs, strike rate, boundaries, phases"
+    columns:
+      - name: match_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_matches')
+              field: match_id
+      - name: batter
+        data_tests:
+          - not_null
+      - name: runs_scored
+        data_tests:
+          - not_null
+      - name: strike_rate
+        data_tests:
+          - not_null
+
+  - name: int_bowling_stats
+    description: "Per bowler per innings aggregates — economy, wickets, phase breakdown"
+    columns:
+      - name: match_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_matches')
+              field: match_id
+      - name: bowler
+        data_tests:
+          - not_null
+      - name: economy_rate
+        description: "NULL when bowler bowled only wides/noballs (no legal deliveries). Intentional."
+
+  - name: int_match_results
+    description: "Match-level view joining metadata with innings totals and chase context"
+    columns:
+      - name: match_id
+        data_tests:
+          - not_null
+          - unique
+      - name: match_outcome_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['chased', 'defended', 'no result']
+      - name: first_innings_runs
+        data_tests:
+          - not_null
