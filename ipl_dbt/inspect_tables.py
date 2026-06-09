@@ -3,40 +3,53 @@ import duckdb
 # Connect to DuckDB database
 con = duckdb.connect("dev.duckdb")
 
-print("=== NULL ECONOMY ROWS ===")
+print("=== TOP VENUES BY MATCHES ===")
 
 query = """
     SELECT
-        bowler,
-        balls_bowled,
-        legal_balls,
-        runs_conceded,
-        economy_rate
-    FROM int_bowling_stats
-    WHERE economy_rate IS NULL
+        venue,
+        city,
+        total_matches,
+        avg_first_innings_score,
+        chase_success_pct,
+        avg_sixes_per_match,
+        toss_win_match_win_pct
+    FROM mart_venue_stats
+    ORDER BY total_matches DESC
+    LIMIT 10
 """
 
 rows = con.execute(query).fetchall()
 
-if not rows:
-    print("No rows found with NULL economy_rate.")
-else:
-    print(
-        f"{'Bowler':<25} "
-        f"{'Balls':>8} "
-        f"{'Legal':>8} "
-        f"{'Runs':>8} "
-        f"{'Economy':>10}"
-    )
-    print("-" * 65)
+print(
+    f"{'Venue':<40} "
+    f"{'City':<20} "
+    f"{'Matches':>8} "
+    f"{'Avg 1st Inns':>14} "
+    f"{'Chase %':>10} "
+    f"{'6s/Match':>10} "
+    f"{'Toss Conv %':>12}"
+)
 
-    for bowler, balls, legal, runs, economy in rows:
-        print(
-            f"{str(bowler):<25} "
-            f"{balls:>8} "
-            f"{legal:>8} "
-            f"{runs:>8} "
-            f"{str(economy):>10}"
-        )
+print("-" * 130)
+
+for (
+    venue,
+    city,
+    total_matches,
+    avg_first_innings_score,
+    chase_success_pct,
+    avg_sixes_per_match,
+    toss_win_match_win_pct,
+) in rows:
+    print(
+        f"{str(venue):<40} "
+        f"{str(city):<20} "
+        f"{total_matches:>8} "
+        f"{avg_first_innings_score:>14.1f} "
+        f"{chase_success_pct:>10.1f} "
+        f"{avg_sixes_per_match:>10.1f} "
+        f"{toss_win_match_win_pct:>12.1f}"
+    )
 
 con.close()
