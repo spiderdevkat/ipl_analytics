@@ -3,7 +3,8 @@ from google.genai import types
 from dotenv import load_dotenv
 import os
 import duckdb
-
+import warnings
+warnings.filterwarnings("ignore")
 load_dotenv()
 
 # ── Config ────────────────────────────────────────────────
