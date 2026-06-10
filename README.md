@@ -20,34 +20,44 @@
 
 ## 🏗️ Architecture
 
-Raw CSV (Kaggle)
-↓
-dbt Seeds → Staging (views) → Intermediate (views) → Marts (tables)
-↓
-DuckDB
-↙      ↘
-Power BI    Gemini AI
-Dashboard    Analyst
+````markdown
+```mermaid
+flowchart TB
+    A[Raw CSV (Kaggle)]
+    --> B[dbt Pipeline<br/>Seeds → Staging → Intermediate → Marts]
+    --> C[DuckDB]
+
+    C --> D[Power BI Dashboard]
+    C --> E[Gemini AI Analyst]
+```
+````
+
 
 ---
 
 ## 📁 Project Structure
 
-ipl_analytics/
-├── ipl_dbt/
-│   ├── models/
-│   │   ├── staging/          # stg_matches, stg_deliveries
-│   │   ├── intermediate/     # int_batting_stats, int_bowling_stats,
-│   │   │                     # int_match_results
-│   │   └── marts/            # mart_batting, mart_bowling,
-│   │                         # mart_team_performance, mart_venue_stats
-│   ├── macros/               # strike_rate, economy_rate, boundary_pct
-│   ├── seeds/                # Raw Kaggle CSVs
-│   └── tests/                # Custom data quality tests
-├── ai_analyst.py             # Text-to-SQL CLI tool
-├── match_report_generator.py # AI match commentary generator
-├── export_powerbi_data.py    # Export marts to CSV for Power BI
-└── power_bi_data/            # Clean CSVs consumed by Power BI
+````markdown
+```mermaid
+flowchart TD
+    A[Raw Kaggle CSVs]
+    --> B[dbt Seeds]
+    --> C[Staging Models<br/>stg_matches<br/>stg_deliveries]
+    --> D[Intermediate Models<br/>int_batting_stats<br/>int_bowling_stats<br/>int_match_results]
+    --> E[Marts<br/>mart_batting<br/>mart_bowling<br/>mart_team_performance<br/>mart_venue_stats]
+
+    E --> F[DuckDB]
+
+    F --> G[Power BI Dashboard]
+    F --> H[Gemini AI Analyst]
+
+    H --> I[ai_analyst.py]
+    H --> J[match_report_generator.py]
+
+    F --> K[export_powerbi_data.py]
+    K --> L[Power BI CSV Exports]
+```
+````
 
 ---
 
@@ -185,7 +195,7 @@ python export_powerbi_data.py
 ![Bowling Analysis](Screenshot_3.png)
 ![Team Performance](Screenshot_4.png)
 ![Venue Analysis](Screenshot_5.png)
-![AI Analyst](screenshot_6.png)
+![AI Analyst](Screenshot_6.png)
 
 ---
 
