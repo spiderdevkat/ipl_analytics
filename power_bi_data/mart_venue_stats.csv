@@ -1,0 +1,36 @@
+venue,city,total_matches,avg_first_innings_score,avg_second_innings_score,highest_score,lowest_score,avg_total_runs,avg_fours_per_match,avg_sixes_per_match,chases_successful,defences_successful,chase_success_pct,toss_win_match_win_pct,first_season,last_season
+Wankhede Stadium,Mumbai,118,170.3,160.1,235,67,330.3,29.2,13.6,64,54,54.2,52.5,2008,2024
+M Chinnaswamy Stadium,Bangalore,94,173.2,154.9,287,62,327.8,27.3,15.0,50,41,54.9,52.1,2008,2024
+"Eden Gardens, Kolkata",Kolkata,93,166.3,153.5,261,81,319.8,29.0,12.7,55,38,59.1,52.7,2008,2024
+Arun Jaitley Stadium,Delhi,90,169.3,155.0,266,56,325.6,28.7,12.7,46,43,51.7,50.0,2008,2024
+MA Chidambaram Stadium,Chennai,85,163.9,149.9,246,70,313.8,25.4,10.8,36,49,42.4,49.4,2008,2024
+Rajiv Gandhi International Stadium,Hyderabad,77,162.8,151.8,277,80,314.6,26.9,11.4,43,34,55.8,36.4,2008,2024
+Punjab Cricket Association Stadium,Chandigarh,61,168.3,157.4,257,67,325.6,30.2,9.9,34,27,55.7,47.5,2008,2023
+"Sawai Mansingh Stadium, Jaipur",Jaipur,57,161.5,148.8,214,94,310.3,28.7,8.8,37,20,64.9,52.6,2008,2024
+Narendra Modi Stadium,Ahmedabad,36,171.6,158.9,233,89,330.4,26.4,14.1,21,15,58.3,50.0,2010,2024
+"Maharashtra Cricket Association Stadium, Pune",Pune,35,168.3,149.3,211,73,317.6,25.0,13.3,17,18,48.6,54.3,2013,2022
+Dubai International Cricket Stadium,,33,166.7,148.5,219,110,315.2,25.8,10.8,14,19,42.4,33.3,2014,2021
+Sheikh Zayed Stadium,Abu Dhabi,29,158.9,145.6,205,70,304.5,26.9,8.8,16,13,55.2,51.7,2014,2021
+Dr DY Patil Sports Academy,Mumbai,28,156.9,147.3,216,82,304.2,24.5,11.8,16,12,57.1,53.6,2008,2022
+Brabourne Stadium,Mumbai,27,178.5,166.1,217,68,344.6,32.4,12.3,13,14,48.1,51.9,2010,2022
+Sharjah Cricket Stadium,,18,171.3,157.8,228,114,329.1,23.1,16.4,11,7,61.1,50.0,2014,2021
+Subrata Roy Sahara Stadium,Pune,16,149.4,133.6,187,99,283.0,22.6,8.6,6,10,37.5,56.3,2012,2013
+Kingsmead,Durban,15,152.0,138.2,211,101,290.2,24.1,8.7,7,8,46.7,60.0,2009,2009
+"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",Lucknow,14,165.4,152.2,235,121,320.7,25.5,12.0,6,7,46.2,57.1,2023,2024
+Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,Visakhapatnam,13,157.5,130.7,206,121,288.2,22.4,11.8,7,6,53.8,46.2,2012,2019
+Dubai International Cricket Stadium,Dubai,13,156.2,150.6,192,115,306.8,25.5,10.5,9,4,69.2,53.8,2021,2021
+SuperSport Park,Centurion,12,154.8,149.6,188,105,304.4,26.5,10.0,8,4,66.7,66.7,2009,2009
+Sharjah Cricket Stadium,Sharjah,10,136.9,129.0,171,90,265.9,17.8,9.8,7,3,70.0,70.0,2021,2021
+Saurashtra Cricket Association Stadium,Rajkot,10,168.9,162.7,213,135,331.6,30.5,10.3,7,3,70.0,40.0,2016,2017
+Holkar Cricket Stadium,Indore,9,160.3,158.8,245,88,319.1,24.7,17.2,8,1,88.9,77.8,2011,2018
+Himachal Pradesh Cricket Association Stadium,Dharamsala,9,175.7,146.2,232,120,321.9,33.2,12.0,4,5,44.4,55.6,2010,2013
+Dr DY Patil Sports Academy,Navi Mumbai,9,168.2,150.1,210,143,318.3,25.0,14.3,4,5,44.4,55.6,2022,2022
+"Zayed Cricket Stadium, Abu Dhabi",Abu Dhabi,8,159.0,150.4,235,92,309.4,28.5,9.1,5,3,62.5,50.0,2021,2021
+New Wanderers Stadium,Johannesburg,8,144.0,142.5,163,123,286.5,23.1,8.0,5,3,62.5,37.5,2009,2009
+Newlands,Cape Town,7,139.4,112.6,184,101,252.0,20.3,8.7,2,5,28.6,57.1,2009,2009
+JSCA International Stadium Complex,Ranchi,7,149.0,144.7,185,115,293.7,22.0,10.9,5,2,71.4,57.1,2013,2015
+St George's Park,Port Elizabeth,7,159.0,131.4,187,141,290.4,21.6,8.9,4,3,57.1,42.9,2009,2009
+Barabati Stadium,Cuttack,7,167.7,157.7,231,126,325.4,30.7,9.7,3,4,42.9,71.4,2010,2014
+Shaheed Veer Narayan Singh International Stadium,Raipur,6,146.3,143.8,164,119,290.2,26.8,7.3,4,2,66.7,50.0,2013,2016
+Nehru Stadium,Kochi,5,146.8,125.8,161,129,272.6,24.6,7.8,2,3,40.0,40.0,2011,2011
+"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",Mohali,5,167.4,167.6,192,142,335.0,28.6,13.8,3,2,60.0,40.0,2024,2024

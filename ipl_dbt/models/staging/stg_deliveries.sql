@@ -23,6 +23,25 @@ cleaned as (
         nullif(player_dismissed, 'NA')              as player_dismissed,
         nullif(dismissal_kind, 'NA')                as dismissal_kind,
         nullif(fielder, 'NA')                       as fielder,
+
+        -- Normalize team names
+        case batting_team
+            when 'Delhi Daredevils'           then 'Delhi Capitals'
+            when 'Kings XI Punjab'            then 'Punjab Kings'
+            when 'Royal Challengers Bangalore' then 'Royal Challengers Bengaluru'
+            when 'Deccan Chargers'            then 'Sunrisers Hyderabad'
+            when 'Rising Pune Supergiant'     then 'Rising Pune Supergiants'
+            else batting_team
+        end                                         as batting_team_clean,
+
+        case bowling_team
+            when 'Delhi Daredevils'           then 'Delhi Capitals'
+            when 'Kings XI Punjab'            then 'Punjab Kings'
+            when 'Royal Challengers Bangalore' then 'Royal Challengers Bengaluru'
+            when 'Deccan Chargers'            then 'Sunrisers Hyderabad'
+            when 'Rising Pune Supergiant'     then 'Rising Pune Supergiants'
+            else bowling_team
+        end                                         as bowling_team_clean,
         -- Derived columns
         case when batsman_runs = 4 then 1 else 0 end  as is_four,
         case when batsman_runs = 6 then 1 else 0 end  as is_six,

@@ -23,7 +23,7 @@ season_stats as (
     select
         batter                                          as player_name,
         season,
-        batting_team                                    as team,
+        batting_team_clean                                    as team,
 
         -- Innings
         count(*)                                        as innings,
@@ -73,7 +73,7 @@ season_stats as (
             / nullif(sum(was_dismissed), 0), 2)         as batting_average
 
     from batting_with_meta
-    group by batter, season, batting_team
+    group by batter, season, batting_team_clean
 )
 
 select * from season_stats

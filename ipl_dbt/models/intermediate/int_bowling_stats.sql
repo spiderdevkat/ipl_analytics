@@ -6,7 +6,7 @@ bowling as (
     select
         match_id,
         inning,
-        bowling_team,
+        bowling_team_clean,
         bowler,
 
         -- Volume
@@ -67,7 +67,7 @@ bowling as (
 
     from deliveries
     where inning in (1, 2)
-    group by match_id, inning, bowling_team, bowler
+    group by match_id, inning, bowling_team_clean, bowler
 )
 
 select * from bowling

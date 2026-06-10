@@ -11,8 +11,8 @@ innings_totals as (
     select
         match_id,
         inning,
-        batting_team,
-        bowling_team,
+        batting_team_clean as batting_team,
+        bowling_team_clean as bowling_team,
         sum(total_runs)                                 as innings_runs,
         sum(is_wicket)                                  as innings_wickets,
         count(*)                                        as balls_bowled,
@@ -33,7 +33,7 @@ innings_totals as (
 
     from deliveries
     where inning in (1, 2)
-    group by match_id, inning, batting_team, bowling_team
+    group by match_id, inning, batting_team_clean, bowling_team_clean
 ),
 
 -- Separate 1st and 2nd innings

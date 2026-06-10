@@ -21,7 +21,7 @@ season_stats as (
     select
         bowler                                          as player_name,
         season,
-        bowling_team                                    as team,
+        bowling_team_clean                                    as team,
 
         -- Volume
         count(*)                                        as matches,
@@ -69,7 +69,7 @@ season_stats as (
             / nullif(sum(wickets), 0), 2)               as bowling_strike_rate
 
     from bowling_with_meta
-    group by bowler, season, bowling_team
+    group by bowler, season, bowling_team_clean
 )
 
 select * from season_stats

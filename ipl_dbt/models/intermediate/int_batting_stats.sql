@@ -6,7 +6,7 @@ batting as (
     select
         match_id,
         inning,
-        batting_team,
+        batting_team_clean,
         batter,
 
         -- Volume
@@ -40,7 +40,7 @@ batting as (
     from deliveries
     -- Only regular innings, exclude super overs
     where inning in (1, 2)
-    group by match_id, inning, batting_team, batter
+    group by match_id, inning, batting_team_clean, batter
 )
 
 select * from batting
