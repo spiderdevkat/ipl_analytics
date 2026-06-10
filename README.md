@@ -21,13 +21,16 @@
 ## 🏗️ Architecture
 
 ```mermaid
-flowchart TB
-    A[Raw CSV (Kaggle)]
-    --> B[dbt Pipeline<br/>Seeds → Staging → Intermediate → Marts]
-    --> C[DuckDB]
+flowchart LR
+    A["Raw CSVs"]
+    --> B["dbt Seeds"]
+    --> C["Staging"]
+    --> D["Intermediate"]
+    --> E["Marts"]
+    --> F["DuckDB"]
 
-    C --> D[Power BI Dashboard]
-    C --> E[Gemini AI Analyst]
+    F --> G["Power BI"]
+    F --> H["Gemini AI"]
 ```
 
 
