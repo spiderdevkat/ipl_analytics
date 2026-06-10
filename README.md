@@ -20,7 +20,6 @@
 
 ## 🏗️ Architecture
 
-````markdown
 ```mermaid
 flowchart TB
     A[Raw CSV (Kaggle)]
@@ -30,14 +29,12 @@ flowchart TB
     C --> D[Power BI Dashboard]
     C --> E[Gemini AI Analyst]
 ```
-````
 
 
 ---
 
 ## 📁 Project Structure
 
-````markdown
 ```mermaid
 flowchart TD
     A[Raw Kaggle CSVs]
@@ -57,7 +54,6 @@ flowchart TD
     F --> K[export_powerbi_data.py]
     K --> L[Power BI CSV Exports]
 ```
-````
 
 ---
 
